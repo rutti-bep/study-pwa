@@ -1,0 +1,13 @@
+{
+  "name":"study pwa app",
+  "short_name":"spa",
+  "description": "studing PWA",
+  "icons": [
+    {
+      "src":"icons/icon-32.png",
+      "sizes":"32x32",
+      "type":"image/png"
+  ],
+  "start_url":"/index.html",
+  "display":"standalone"
+}
