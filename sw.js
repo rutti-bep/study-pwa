@@ -1,4 +1,6 @@
 console.log("sw run")
+var counter;
+
 self.addEventListener('install', (e) => {
   console.log('[Service Worker] Install');
 
@@ -13,10 +15,11 @@ self.addEventListener('fetch', (e) => {
 
 self.addEventListener('message',(e)=>{
     setTimeout(()=>{
-        console.log("run");
+        counter++;
+        console.log("run"+counter);
         e.source.postMessage({
         type: 'clipboard',
-        msg: "test"
+        msg: "test"+counter
     });
 
     },1000);
