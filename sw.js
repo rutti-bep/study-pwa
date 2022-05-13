@@ -14,7 +14,7 @@ self.addEventListener('fetch', (e) => {
 });
 
 self.addEventListener('message',(e)=>{
-    setTimeout(()=>{
+    setInterval(()=>{
         counter++;
         console.log("run"+counter);
         e.source.postMessage({
