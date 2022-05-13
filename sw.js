@@ -5,11 +5,12 @@ self.addEventListener('install', (e) => {
 });
 self.addEventListener('fetch', (e) => {
     console.log('[Service Worker] Fetched resource '+e.request.url);
-  navigator.clipboard.writeText("serviceworker").catch(e=>console.log(e));
+/*  navigator.clipboard.writeText("serviceworker").catch(e=>console.log(e));
   navigator.clipboard.readText().then(
   clipText => console.log(clipText));
+*/
 });
-self.addEventListenr('clip',(e)=>{
+self.addEventListener('clip',(e)=>{
     setTimeout(()=>{
         console.log("run");
       self.postMessage({
