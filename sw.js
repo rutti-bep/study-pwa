@@ -1,5 +1,5 @@
 console.log("sw run")
-var counter;
+var counter = 0;
 
 self.addEventListener('install', (e) => {
   console.log('[Service Worker] Install');
