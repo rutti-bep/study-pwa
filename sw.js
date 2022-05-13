@@ -22,5 +22,5 @@ self.addEventListener('message',(e)=>{
         msg: "test"+counter
     });
 
-    },1000);
+    },5000);
 })
