@@ -19,8 +19,7 @@ navigator.serviceWorker.addEventListener('message', event => {
 });
 
 const clip = ()=>{
-    client.postMessage({
-        type:'clip',
-      msg:"!"
-    });
+   navigator.serviceWorker.ready.then( registration => {
+    registration.active.postMessage("Hi service worker");
+  });
 }

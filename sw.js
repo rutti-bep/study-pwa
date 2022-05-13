@@ -10,12 +10,13 @@ self.addEventListener('fetch', (e) => {
   clipText => console.log(clipText));
 */
 });
-self.addEventListener('clip',(e)=>{
+
+self.addEventListener('message',(e)=>{
     setTimeout(()=>{
         console.log("run");
-      self.postMessage({
-      type: 'clipboard',
-      msg: "test"
+        e.source.postMessage({
+        type: 'clipboard',
+        msg: "test"
     });
 
     },1000);
